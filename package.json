@@ -1,7 +1,7 @@
 {
   "name": "open-last-project",
   "main": "lib/open-last-project",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Saves the last project you opened and automatically opens it when you open a new window.",
   "license": "MIT",
   "private": true,
