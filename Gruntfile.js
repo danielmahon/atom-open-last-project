@@ -49,6 +49,7 @@ module.exports = function() {
   });
   this.loadNpmTasks('grunt-contrib-jshint');
   this.loadNpmTasks('grunt-lesslint');
+  this.loadNpmTasks('grunt-verb');
   this.loadNpmTasks('grunt-apm');
   this.loadNpmTasks('grunt-contrib-watch');
   this.registerTask('lint', ['lesslint', 'jshint']);

@@ -1,6 +1,26 @@
-Package created using [generator-atom-package][npm].
+# open-last-project
 
-Find more information concerning Atom package creation [here][atom-doc].
+> An Atom.io package that automatically reopens the last project and files you were working on.
 
-[npm]: https://www.npmjs.org/package/generator-atom-package
-[atom-doc]: https://atom.io/docs/latest/creating-a-package "Official documentation"
+## Install
+You can install **open-last-project** using the Preferences pane.
+
+## Plugins
+Try these awesome plugins:
++ [project-switcher](https://atom.io/packages/project-switcher)
+
+## Todo
++ Remove that pesky untitled file upon new window
+
+## Author
+
+**Daniel Mahon**
+ 
++ [github/danielmahon](https://github.com/danielmahon)
++ [twitter/danielmahon](http://twitter.com/danielmahon) 
+
+## License
+Copyright (c) 2014 Daniel Mahon, contributors.  
+Released under the MIT license
+
+***
