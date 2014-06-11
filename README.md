@@ -5,12 +5,12 @@
 ## Install
 You can install **open-last-project** using the Preferences pane.
 
-## Plugins
-Try these awesome plugins:
-+ [project-switcher](https://atom.io/packages/project-switcher)
-
 ## Todo
 + Remove that pesky untitled file upon new window
+
+## Packages
+Try these awesome packages:
++ [project-switcher](https://atom.io/packages/project-switcher)
 
 ## Author
 
