@@ -6,7 +6,7 @@
 You can install **open-last-project** using the Preferences pane.
 
 ## Todo
-+ Remove that pesky untitled file upon new window
++ ~~Remove that pesky untitled file upon new window~~
 
 ## Packages
 Try these awesome packages:
