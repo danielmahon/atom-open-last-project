@@ -7,10 +7,11 @@ You can install **open-last-project** using the Preferences pane.
 
 ## Todo
 + Support split panes
++ ~~Fix deprecated API calls~~
 + ~~Remove that pesky untitled file upon new window~~
 
-## Packages
-Try these awesome packages:
+## Packages I Like
+Make your life easier:
 + [project-switcher](https://atom.io/packages/project-switcher)
 
 ## Author
