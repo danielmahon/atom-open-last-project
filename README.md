@@ -5,6 +5,9 @@
 ## Install
 You can install **open-last-project** using the Preferences pane.
 
+The Atom.io team is building a MUCH better version of this into core for 1.0!
+https://github.com/atom/atom/issues/1603
+
 ## Todo
 + Support split panes
 + ~~Fix deprecated API calls~~
