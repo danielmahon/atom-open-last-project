@@ -4,9 +4,13 @@ module.exports =
   new class OpenLastProject
     Save:->
       Files = []
+      ActiveEditor = atom.workspace.getActiveEditor()
       atom.workspace.eachEditor (editor)->
-        Files.push editor.getPath()
-      Data = Path: atom.project.path, Files: Files
+        File = editor.getPath()
+        return unless File
+        Files.push File
+      CurrentFile = ActiveEditor && ActiveEditor.getPath() || null;
+      Data = Path: atom.project.path, Files: Files, CurrentFile: CurrentFile
       localStorage.setItem('open-last-project', JSON.stringify(Data));
     Load:->
       LastProject = localStorage.getItem('open-last-project')
@@ -20,5 +24,7 @@ module.exports =
         # Remove the empty pane
         atom.workspace.eachEditor (editor)->
           editor.destroy() unless editor.getPath()
+        return unless LastProject.CurrentFile
+        atom.workspace.open(LastProject.CurrentFile)
     Migrate:(LastProject)->
-      Path: LastProject.path, Files: LastProject.files
+      Path: LastProject.path, Files: LastProject.files, CurrentFile: LastProject.files[0]
