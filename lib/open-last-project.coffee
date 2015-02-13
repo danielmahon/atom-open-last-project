@@ -1,6 +1,8 @@
 
 
 module.exports =
+  Save:->
+    localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.path}))
   LoadProject:->
     LastProject = localStorage.getItem('open-last-project')
     return unless LastProject

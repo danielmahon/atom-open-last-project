@@ -7,7 +7,9 @@ module.exports =
     @OpenLastProject = require('./open-last-project')
     @OpenLastProject.LoadProject() unless atom.project.path
     @OpenLastProject.LoadFiles(state) if state.Status
+    @Subscriptions.push atom.project.onDidChangePaths @OpenLastProject.Save
   deactivate:->
+    @OpenLastProject.Save()
     @Subscriptions.forEach (sub)-> sub.dispose()
     @Subscriptions = []
   serialize:->
