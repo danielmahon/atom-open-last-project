@@ -5,8 +5,8 @@ module.exports =
   Subscriptions: []
   activate:(state)->
     @OpenLastProject = require('./open-last-project')
-    @OpenLastProject.LoadProject() unless atom.project.getPaths().length
-    @OpenLastProject.LoadFiles(state) if state.Status
+    state = @OpenLastProject.LoadProject() unless atom.project.getPath()
+    @OpenLastProject.LoadFiles(state) if state and state.Status
     @Subscriptions.push atom.project.onDidChangePaths @OpenLastProject.Save
   deactivate:->
     @OpenLastProject.Save()
