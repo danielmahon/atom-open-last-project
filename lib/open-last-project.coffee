@@ -2,7 +2,9 @@
 
 module.exports =
   Save:->
-    localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.path}))
+    ProjectPaths = atom.project.getPaths()
+    if ProjectPaths.length
+      localStorage.setItem('open-last-project',JSON.stringify({Path: ProjectPaths[0]}))
   LoadProject:->
     LastProject = localStorage.getItem('open-last-project')
     return unless LastProject
