@@ -1,5 +1,6 @@
 
 
+FS = require('fs')
 module.exports =
   Save:->
     Files = []
@@ -16,11 +17,17 @@ module.exports =
     LastProject = JSON.parse(LastProject)
     atom.project.setPaths [LastProject.Path]
     Promises = []
-    LastProject.Files.forEach (file)-> Promises.push atom.workspace.open(file)
+    LastProject.Files.forEach (file)->
+      Promises.push new Promise (resolve)->
+        FS.exists file, (Status)->
+          return resolve() unless Status
+          atom.workspace.open(file).then(resolve)
     Promise.all(Promises).then ->
       # Remove the empty pane
       atom.workspace.eachEditor (editor)->
         editor.destroy() unless editor.getPath()
       # Set the last active file
       return unless LastProject.CurrentFile
-      atom.workspace.open(LastProject.CurrentFile)
+      FS.exists LastProject.CurrentFile, (Status)->
+        return unless Status
+        atom.workspace.open LastProject.CurrentFile
