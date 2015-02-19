@@ -2,7 +2,7 @@
   "name": "open-last-project",
   "main": "lib/main",
   "version": "0.3.1",
-  "description": "An Atom.io package that automatically reopens the last project and files you were working on.",
+  "description": "An Atom package that automatically reopens the last project and files you were working on.",
   "license": "MIT",
   "private": true,
   "repository": {
@@ -16,21 +16,7 @@
   "engines": {
     "atom": ">0.50.0"
   },
-  "scripts": {
-    "test": "grunt"
-  },
   "dependencies": {},
-  "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-apm": "0.0.1",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-lesslint": "~1.0.0",
-    "grunt-verb": "^0.2.4",
-    "verb": "~0.2.6",
-    "chai": "~1.9.1",
-    "mocha": "*"
-  },
   "author": {
     "name": "Daniel Mahon",
     "url": "https://github.com/danielmahon"
