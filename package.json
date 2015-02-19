@@ -49,13 +49,5 @@
     "markdown",
     "templates",
     "verb"
-  ],
-  "readme": "# open-last-project\n\n> An Atom.io package that automatically reopens the last project and files you were working on.\n\n## Install\nYou can install **open-last-project** using the Preferences pane.\n\n## Todo\n+ Remove that pesky untitled file upon new window\n\n## Packages\nTry these awesome packages:\n+ [project-switcher](https://atom.io/packages/project-switcher)\n\n## Author\n\n**Daniel Mahon**\n \n+ [github/danielmahon](https://github.com/danielmahon)\n+ [twitter/danielmahon](http://twitter.com/danielmahon) \n\n## License\nCopyright (c) 2014 Daniel Mahon, contributors.  \nReleased under the MIT license\n\n***\n",
-  "readmeFilename": "README.md",
-  "_id": "open-last-project@0.0.5",
-  "dist": {
-    "shasum": "93b7cc2300aaf49454efd1fd98b3f69591d064df"
-  },
-  "_resolved": "/var/folders/8g/4sm7801s0fjcxkhkf4sd1vg40000gn/T/d-114511-4757-kkou5l/package.tgz",
-  "_from": "/var/folders/8g/4sm7801s0fjcxkhkf4sd1vg40000gn/T/d-114511-4757-kkou5l/package.tgz"
+  ]
 }
