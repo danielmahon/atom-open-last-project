@@ -5,11 +5,12 @@
 ## Install
 You can install **open-last-project** using the Preferences pane.
 
-The Atom.io team is building a MUCH better version of this into core for 1.0!
+The Atom.io team is hopefully building a version of this into core for 1.0!
 https://github.com/atom/atom/issues/1603
 
 ## Todo
 + Support split panes
++ ~~Convert to CoffeeScript~~
 + ~~Fix deprecated API calls~~
 + ~~Remove that pesky untitled file upon new window~~
 
@@ -20,9 +21,14 @@ Make your life easier:
 ## Author
 
 **Daniel Mahon**
- 
+
 + [github/danielmahon](https://github.com/danielmahon)
 + [twitter/danielmahon](http://twitter.com/danielmahon)
+
+## Contributors
+
+Special thanks to [steelbrain](https://github.com/steelbrain) for the CoffeeScript rewrite!
+
 
 ## License
 Copyright (c) 2014 Daniel Mahon, contributors.  
