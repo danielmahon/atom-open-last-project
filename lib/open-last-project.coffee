@@ -3,19 +3,20 @@
 FS = require('fs')
 module.exports =
   Save:->
-    Files = []
-    ActiveEditor = atom.workspace.getActiveEditor()
-    atom.workspace.eachEditor (editor)->
-      File = editor.getPath()
-      return unless File
-      Files.push File
-    CurrentFile = ActiveEditor && ActiveEditor.getPath() || null;
-    localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.getPath(), Files: Files, CurrentFile: CurrentFile}))
+    try
+      Files = []
+      ActiveEditor = atom.workspace.getActiveEditor()
+      atom.workspace.eachEditor (editor)->
+        File = editor.getPath()
+        return unless File
+        Files.push File
+      CurrentFile = ActiveEditor && ActiveEditor.getPath() || null;
+      localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.getPath(), Files: Files, CurrentFile: CurrentFile}))
   LoadProject:->
     LastProject = localStorage.getItem('open-last-project')
     return unless LastProject
     LastProject = JSON.parse(LastProject)
-    atom.project.setPaths [LastProject.Path]
+    atom.project.setPath LastProject.Path
     Promises = []
     LastProject.Files.forEach (file)->
       Promises.push new Promise (resolve)->
