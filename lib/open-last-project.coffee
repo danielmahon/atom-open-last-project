@@ -26,7 +26,7 @@ module.exports =
           atom.workspace.open(file).then(resolve)
     Promise.all(Promises).then ->
       # Remove the empty pane
-      atom.workspace.eachEditor (editor)->
+      atom.workspace.getTextEditors().forEach (editor)->
         editor.destroy() unless editor.getPath()
       # Set the last active file
       return unless LastProject.CurrentFile
