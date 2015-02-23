@@ -6,8 +6,6 @@ module.exports =
   activate:->
     @OpenLastProject = require('./open-last-project')
     @OpenLastProject.LoadProject() unless atom.project.getPath()
-    return ;
-    @OpenLastProject.LoadFiles()
     @Subscriptions.push atom.project.onDidChangePaths @OpenLastProject.Save
     @Subscriptions.push atom.workspace.onDidAddPaneItem @OpenLastProject.Save
     @Subscriptions.push atom.workspace.onDidDestroyPaneItem @OpenLastProject.Save
