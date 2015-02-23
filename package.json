@@ -1,7 +1,7 @@
 {
   "name": "open-last-project",
   "main": "lib/main",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "An Atom package that automatically reopens the last project and files you were working on.",
   "license": "MIT",
   "private": true,
