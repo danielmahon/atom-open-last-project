@@ -16,6 +16,7 @@ module.exports =
     LastProject = localStorage.getItem('open-last-project')
     return unless LastProject
     LastProject = JSON.parse(LastProject)
+    return unless LastProject.Path
     atom.project.setPath LastProject.Path
     Promises = []
     LastProject.Files.forEach (file)->
