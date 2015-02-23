@@ -17,7 +17,7 @@ module.exports =
     return unless LastProject
     LastProject = JSON.parse(LastProject)
     return unless LastProject.Path
-    atom.project.setPath LastProject.Path
+    atom.project.setPaths [LastProject.Path]
     Promises = []
     LastProject.Files.forEach (file)->
       Promises.push new Promise (resolve)->
