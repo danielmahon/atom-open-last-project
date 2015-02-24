@@ -6,7 +6,7 @@ module.exports =
     try
       Files = []
       ActiveEditor = atom.workspace.getActiveEditor()
-      atom.workspace.eachEditor (editor)->
+      atom.workspace.getTextEditors().forEach (editor)->
         File = editor.getPath()
         return unless File
         Files.push File
