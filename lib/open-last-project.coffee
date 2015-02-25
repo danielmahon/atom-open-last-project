@@ -18,9 +18,8 @@ module.exports =
     LastProject = JSON.parse(LastProject)
     return unless LastProject.Path
     atom.project.setPaths [LastProject.Path]
-    Promises = []
-    LastProject.Files.forEach (file)->
-      Promises.push new Promise (resolve)->
+    Promises = LastProject.Files.map (file)->
+      return new Promise (resolve)->
         FS.exists file, (Status)->
           return resolve() unless Status
           atom.workspace.open(file).then(resolve)
