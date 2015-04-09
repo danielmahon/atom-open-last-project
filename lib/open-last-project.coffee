@@ -5,13 +5,13 @@ module.exports =
   Save:->
     try
       Files = []
-      ActiveEditor = atom.workspace.getActiveEditor()
+      ActiveEditor = atom.workspace.getActiveTextEditor()
       atom.workspace.getTextEditors().forEach (editor)->
         File = editor.getPath()
         return unless File
         Files.push File
       CurrentFile = ActiveEditor && ActiveEditor.getPath() || null;
-      localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.getPath(), Files: Files, CurrentFile: CurrentFile}))
+      localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.getPaths()[0], Files: Files, CurrentFile: CurrentFile}))
   LoadProject:->
     LastProject = localStorage.getItem('open-last-project')
     return unless LastProject
