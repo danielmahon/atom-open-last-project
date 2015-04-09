@@ -11,13 +11,14 @@ module.exports =
         return unless File
         Files.push File
       CurrentFile = ActiveEditor && ActiveEditor.getPath() || null;
-      localStorage.setItem('open-last-project',JSON.stringify({Path: atom.project.getPaths()[0], Files: Files, CurrentFile: CurrentFile}))
+      localStorage.setItem('open-last-project',JSON.stringify({Paths: atom.project.getPaths(), Files: Files, CurrentFile: CurrentFile}))
   LoadProject:->
     LastProject = localStorage.getItem('open-last-project')
     return unless LastProject
     LastProject = JSON.parse(LastProject)
-    return unless LastProject.Path
-    atom.project.setPaths [LastProject.Path]
+    return unless LastProject.Paths.length
+
+    atom.project.setPaths LastProject.Paths
     Promises = LastProject.Files.map (file)->
       return new Promise (resolve)->
         FS.exists file, (Status)->
