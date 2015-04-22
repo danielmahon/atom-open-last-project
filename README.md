@@ -1,12 +1,11 @@
-# open-last-project
+# open-last-project (Deprecated)
 
 > An Atom.io package that automatically reopens the last project and files you were working on.
 
+*Deprecated as of Atom 0.193.0, as this functionality [has been added to Atom core](https://github.com/atom/atom/issues/1603#issuecomment-93599126) and will continue to be refined until 1.0*
+
 ## Install
 You can install **open-last-project** using the Preferences pane.
-
-The Atom.io team is hopefully building a version of this into core for 1.0!
-https://github.com/atom/atom/issues/1603
 
 ## Todo
 + Support split panes
